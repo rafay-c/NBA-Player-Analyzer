@@ -10,9 +10,10 @@ player_info = commonplayerinfo.CommonPlayerInfo(player_id=2544)
 
 player = player_info.common_player_info.get_json()
 
-if len(player) >= 0:
+if len(player) >= 0: #overwrites eachtime for some reason?
         with open('Player.json', 'w') as outfile:
             json.dump(player, outfile, indent=4)
+            outfile.write('\n')
 			
 
 print(player)
