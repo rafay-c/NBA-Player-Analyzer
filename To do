@@ -1,0 +1,9 @@
+To Do
+1)Pull NBA Player stats by ID
+2)filter by position
+3)avg the stats correlated to age (years 1980-2020)
+4)pass in player Name and see if they are above or below average for their position
+    -suggested names pulled
+    -current player avg stats vs position avg over the years
+    -JSON Object Comparison
+    
