@@ -6,22 +6,28 @@ import json
 # Get all players.
 player_dict = players.get_players()
 
+# Get a specific player's info
 player_info = commonplayerinfo.CommonPlayerInfo(player_id=2544)
 
 player = player_info.common_player_info.get_json()
+
 
 if len(player) >= 0: #overwrites eachtime for some reason?
         with open('Player.json', 'w') as outfile:
             json.dump(player, outfile, indent=4)
             outfile.write('\n')
-			
 
-print(player)
+#need to find a way to only get first/last name, position, and calculate age
+with open('Player.json') as json_file:
+    data = json.load(json_file)
+    #for p in data['data']: 
+    print(data)
+
+
+
 
 # tryna get 
 # data = endpoints.__init__()
 
 # data = endpoints.CommonAllPlayers.get_data_frames(player_id=78630)
-
-#print(data)
-
+# print(data)
