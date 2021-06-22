@@ -7,11 +7,19 @@ import json
 player_dict = players.get_players()
 
 # Get a specific player's info
-for p in player_dict:
-    print(p["id"], p["full_name"], p["is_active"])
+# for p in player_dict:
+#     print(p["id"], p["full_name"], p["is_active"])
+player_info = commonplayerinfo.CommonPlayerInfo(player_id=2544)
+player_dict = player_info.common_player_info.get_dict()
+for p1 in player_dict['data']:
+    print(p1[1])
 
 
-player_info = commonplayerinfo.CommonPlayerInfo(player_id=2545)
+# for p in player_dict:
+#     player_info = commonplayerinfo.CommonPlayerInfo(player_id=p['id'])
+#     for p1 in player_info['CommonPlayerInfo']:
+#         print(p1[1])
+
 #gets json of players info
 player_json = player_info.common_player_info.get_json()
 #gets dictionary of players info
