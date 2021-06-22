@@ -7,15 +7,19 @@ import json
 player_dict = players.get_players()
 
 # Get a specific player's info
-player_info = commonplayerinfo.CommonPlayerInfo(player_id=2544)
+for p in player_dict:
+    print(p["id"], p["full_name"], p["is_active"])
+
+
+player_info = commonplayerinfo.CommonPlayerInfo(player_id=2545)
 #gets json of players info
 player_json = player_info.common_player_info.get_json()
 #gets dictionary of players info
 player_dict = player_info.common_player_info.get_dict()
 #getting data from the dictionary
-for p in player_dict['data']:
-    print('First name:' + p[1]) #prints first name
-    print('Last name:' + p[2])
+# for p in player_dict['data']:
+#     print('First name:' + p[1]) #prints first name
+#     print('Last name:' + p[2])
 
 #writes to json file(not sure if necessary here)  
 if len(player_json) >= 0: #overwrites eachtime for some reason?
